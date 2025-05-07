@@ -412,6 +412,22 @@ def experiment_3():
 
 
 if __name__ == "__main__":
-    # experiment_1()
-    # experiment_2()
-    experiment_3()
+
+    while True: 
+        print("1. Run Experiment 1")
+        print("2. Run Experiment 2")
+        print("3. Run Experiment 3")
+        print("0. Exit")
+
+        choice = input("> ")
+
+        match choice:
+            case 1: 
+                experiment_1()
+            case 2:
+                experiment_2()
+            case 3: 
+                experiment_3()
+            case _:
+                print("Exiting")
+                break
