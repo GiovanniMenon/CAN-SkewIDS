@@ -422,11 +422,11 @@ if __name__ == "__main__":
         choice = input("> ")
 
         match choice:
-            case 1: 
+            case "1": 
                 experiment_1()
-            case 2:
+            case "2":
                 experiment_2()
-            case 3: 
+            case "3": 
                 experiment_3()
             case _:
                 print("Exiting")
