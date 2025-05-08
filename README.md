@@ -16,7 +16,7 @@ CAN-SkewIDS is an implementation of the proof-of-concept (PoC) described in the 
 
 ### Experiment 1: CIDS stability
 
-This experiment is designed to test the overall stability of the CIDS, by having just two devices running on the CAN bus.
+This experiment is designed to test the overall stability of the CIDS, by having just two devices running on the CAN bus. This experiment is aimed at measuring how stable the algorithm is in regards to False Positives in a perfect scenario.
 
 
 | Message Count | Period | Skew per Period | False Positives | % Correctly Classified Messages |
@@ -30,21 +30,21 @@ This experiment is designed to test the overall stability of the CIDS, by having
 
 This experiment is designed to demonstrate that all the derived accumulated clock offsets were found to be linear in time, furthermore demonstrating that messages sent from the same device have the same constant clock skew and can be used to fingerprint the transmitter ECUs.
 
-| <img src="./graph/graph_experiment_2.png" width="300"/> | <img src="./graph/graph_experiment_2_paper.png" width="300"/> |
+| <img src="./graph/graph_experiment_2.png" width="450"/> | <img src="./graph/graph_experiment_2_paper.png" width="450"/> |
 |----------------------------------|----------------------------------|
 | *Figure 1: Our Results*                       | *Figure 2: Paper Results*                       |
 
-As it can be seen, the messages sent from a device with the same clock skew, but different arbitration Ids correlate, and are almost linear.
+As it can be seen, the messages sent from a device with the same clock skew, but different arbitration Ids correlate, are almost linear.
 
 ### Experiment 3: Fabrication Attack Detection *(from the paper)*
 
 The goal of this experiment is to use the accumulated clock skews—previously gathered for ECU fingerprinting—to calculate the deviation of incoming messages. By comparing these deviations, the system can detect intrusions.
 
-| <img src="./graph/graph_experiment_3.png" width="300"/> | <img src="./graph/graph_experiment_3_paper.png" width="300"/> |
+| <img src="./graph/graph_experiment_3.png" width="450"/> | <img src="./graph/graph_experiment_3_paper.png" width="450"/> |
 |----------------------------------|----------------------------------|
 | *Figure 3: Our Results*                       | *Figure 4: Paper Results*                       |
 
-he experiment resulting graph shows a massive increase in accumulated clock offset values once a fabricated message is sent from another device. Thus indicating an intrusion.
+The experiment resulting graph shows a massive increase in accumulated clock offset values once a fabricated message is sent from another device. Thus indicating an intrusion.
 
 ## Set Up
 
@@ -57,7 +57,7 @@ python run main.py
 ```
 
 ---
-
+#### Authors
 ```
 Tautvydas Jackevičius
 Giovanni Menon
