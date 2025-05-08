@@ -1,5 +1,5 @@
 > [!NOTE] 
-> The code for these projects may not be the best or the cleanest, as it was written as group project and sometimes in an experimental way.
+> The code for these projects may not be the best or the cleanest, as it was written as project and sometimes in an experimental way.
 > Some aspects could definitely be improved and optimized.
 # CAN-SkewIDS
 
